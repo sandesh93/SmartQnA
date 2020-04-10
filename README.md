@@ -1,2 +1,2 @@
 # SmartQnA
-"SmartQnA" project. Single platform all your queries. Post your queries and get answer from experts. 
+"SmartQnA" project. Single platform all for your queries. Post your queries and get answer from experts. 
