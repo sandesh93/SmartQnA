@@ -9,7 +9,7 @@
 <body>
 gaurab home page tak
 ${name}
-
-
+<a href="http://localhost:8080/register">Register Now</a><br>
+<a href="http://localhost:8080/login">Login</a>
 </body>
 </html>

@@ -1,19 +1,29 @@
 package com.example.demo;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.example.restclient.LoginRestClientUtil;
+
+@Controller
 public class LoginRequestController {
 	
-	@Autowired
-	 RestTemplate restTemplate;
+	LoginRestClientUtil restcliient = new LoginRestClientUtil();
 	
-	@PostMapping("/register")
-	 public String postAvailability(@RequestBody User user) {	 
-	 ResponseEntity<String> response = restTemplate.postForEntity("/register", user, String.class);
-	 return response.getBody();
+	@RequestMapping("/registerUser")
+	public String addUser(User user) {	 
+		System.out.println("register page");
+		restcliient.addUser(user);
+		return "home.jsp";
 	 }
+	
+	@PostMapping("/LoginUser")
+	 public String loginUser(@RequestBody User user) {	 
+		
+		return "OK";
+	 }
+	
 }

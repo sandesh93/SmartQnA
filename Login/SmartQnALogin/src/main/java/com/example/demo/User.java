@@ -36,6 +36,11 @@ public class User {
 	public String getEmail() {
 		return email;
 	}
+	@Override
+	public String toString() {
+		return "User [userName=" + userName + ", password=" + password + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", email=" + email + ", number=" + number + "]";
+	}
 	public void setEmail(String email) {
 		this.email = email;
 	}

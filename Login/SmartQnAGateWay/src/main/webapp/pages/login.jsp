@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form method="post" action="/LoginUser">
+	<input type="text" name="username"></input><br>
+	<input type="text" name="password"></input><br>
+	<button type="submit" ></button><br>
+</form>
 </body>
 </html>

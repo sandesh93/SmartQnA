@@ -1,14 +1,12 @@
 package com.example.demo;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class GatewayController {
-	LoginRequestController login = new LoginRequestController();
-	
+public class GatewayViewController {
+
 	@RequestMapping("home")
 	public ModelAndView home(String name) {
 		ModelAndView mv = new ModelAndView();
@@ -17,13 +15,17 @@ public class GatewayController {
 		return mv;
 	}
 	
-	@RequestMapping("/LoginRegister")
-	public void register(User user) {	
-		
+	@RequestMapping("/register")
+	public ModelAndView register(User user) {	
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("register");
+		return mv;
 	}
 	
-	@RequestMapping("/Login")
-	public void login() {
-		
+	@RequestMapping("/login")
+	public ModelAndView login() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("login");
+		return mv;		
 	}
 }
